@@ -30,11 +30,23 @@ public class Phonebook {
 	}
 
 	public void deleteContact(String name) {
-		// TODO 2
+		for (Contact contact:pb) {
+			if(name.equals(contact.getName())) {
+				System.out.println("Contact " + contact + " removed successfully");
+				pb.remove(contact);
+				return;
+			}
+		}
+		System.out.println("Contact not found");
+
 	}
 
 	public void printPhoneBook() {
-		// TODO 3
+		System.out.println("***************");
+		for (Contact contact:pb) {
+			System.out.println("* " + contact);
+		}
+		System.out.println("***************");
 	}
 
 	public ArrayList<Contact> findContacts(String name) {

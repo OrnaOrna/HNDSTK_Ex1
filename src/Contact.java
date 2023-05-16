@@ -19,6 +19,12 @@ public class Contact {
 		this._phoneNum = c.getPhoneNum();
 	}
 
+	@Override
+	public Contact clone() throws CloneNotSupportedException {
+		Contact clone = (Contact) super.clone();
+		return new Contact(this.getName(), this.getPhoneNum());
+	}
+
 	public String getName() {
 		return _name;
 	}
@@ -40,7 +46,7 @@ public class Contact {
 	
 	@Override
 	public String toString() {
-		return "(" + this.getPhoneNum() + ", " + this.getName() + ")";
+		return "(" + this.getName() + ", " + this.getPhoneNum() + ")";
 	}
 
 	/**
