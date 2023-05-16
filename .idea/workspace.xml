@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d11978ac-290f-477d-bfc6-a5b795d641aa" name="Changes" comment="stuff">
+    <list default="true" id="d11978ac-290f-477d-bfc6-a5b795d641aa" name="Changes" comment="1 2 3 done משהו משהו משהו tree ~Ornaorna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Contact.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Phonebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Phonebook.java" afterDir="false" />
     </list>
@@ -90,7 +89,13 @@
       <option name="presentableId" value="LOCAL‎00001" />
       <updated>1684263446235</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="1 2 3 done משהו משהו משהו tree ~Ornaorna">
+      <created>1684265159830</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1684265159830</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +115,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Im committing" />
     <MESSAGE value="stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
+    <MESSAGE value="1 2 3 done" />
+    <MESSAGE value="1 2 3 done משהו משהו משהו tree ~Ornaorna" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 2 3 done משהו משהו משהו tree ~Ornaorna" />
   </component>
 </project>

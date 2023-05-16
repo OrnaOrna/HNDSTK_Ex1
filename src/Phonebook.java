@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Phonebook {
 
@@ -66,11 +65,13 @@ public class Phonebook {
 	}
 
 	public void deleteDuplicates() {
-		// TODO 7
+		Set<Contact> set = new HashSet<>(pb);
+		pb.clear();
+		pb.addAll(set);
 	}
 
 	public void reverseOrder() {
-		// TODO 8
+		Collections.reverse(pb);
 	}
 
 	public void saveToFile(String filename) throws IOException {
