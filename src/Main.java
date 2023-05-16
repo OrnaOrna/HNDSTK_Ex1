@@ -20,8 +20,7 @@ public class Main {
 		boolean menu_on = true;
 
 		Phonebook phonebook = new Phonebook();
-		ArrayList<Contact> pb = new ArrayList<Contact>();
-		phonebook.setPb(pb);
+
 		System.out.println("Hello dear user!\nWe will organize a Phone Book for you to use!\nHere's a list of options for you to choose from:");
 		while (menu_on) {
 			System.out.println("***************");
@@ -79,7 +78,7 @@ public class Main {
 
 					System.out.println("Phone book sorted numerically");
 				}
-				case 7 -> { // Delete Dups
+				case 7 -> { // Delete Duplicates
 					phonebook.deleteDuplicates();
 					// TODO
 

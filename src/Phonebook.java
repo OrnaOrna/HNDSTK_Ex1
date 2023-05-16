@@ -26,7 +26,7 @@ public class Phonebook {
 	// Choice functions:
 
 	public void addContact(Contact c) {
-		// TODO 1
+		pb.add(c);
 	}
 
 	public void deleteContact(String name) {
