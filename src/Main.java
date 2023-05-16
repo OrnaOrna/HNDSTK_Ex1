@@ -128,9 +128,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		handleUser();
-		Contact c = new Contact();
-		System.out.println(Contact.parse(c.toString()));
+		handleUser();
 	}
 
 }
