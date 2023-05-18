@@ -1,6 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Phonebook {
 
@@ -26,15 +25,27 @@ public class Phonebook {
 	// Choice functions:
 
 	public void addContact(Contact c) {
-		// TODO 1
+		pb.add(c);
 	}
 
 	public void deleteContact(String name) {
-		// TODO 2
+		for (Contact contact:pb) {
+			if(name.equals(contact.getName())) {
+				System.out.println("Contact " + contact + " removed successfully");
+				pb.remove(contact);
+				return;
+			}
+		}
+		System.out.println("Contact not found");
+
 	}
 
 	public void printPhoneBook() {
-		// TODO 3
+		System.out.println("***************");
+		for (Contact contact:pb) {
+			System.out.println("* " + contact);
+		}
+		System.out.println("***************");
 	}
 
 	public ArrayList<Contact> findContacts(String name) {
@@ -54,11 +65,13 @@ public class Phonebook {
 	}
 
 	public void deleteDuplicates() {
-		// TODO 7
+		Set<Contact> set = new HashSet<>(pb);
+		pb.clear();
+		pb.addAll(set);
 	}
 
 	public void reverseOrder() {
-		// TODO 8
+		Collections.reverse(pb);
 	}
 
 	public void saveToFile(String filename) throws IOException {

@@ -20,8 +20,7 @@ public class Main {
 		boolean menu_on = true;
 
 		Phonebook phonebook = new Phonebook();
-		ArrayList<Contact> pb = new ArrayList<Contact>();
-		phonebook.setPb(pb);
+
 		System.out.println("Hello dear user!\nWe will organize a Phone Book for you to use!\nHere's a list of options for you to choose from:");
 		while (menu_on) {
 			System.out.println("***************");
@@ -29,21 +28,22 @@ public class Main {
 			System.out.println("***************");
 			System.out.print("Enter your choice: ");
 			choice = reader.nextInt();
+			reader.nextLine();
 
 			switch (choice) {
 				case 1 -> { // add contact
-					System.out.println("Enter name and phone number for the contact: ");
-					String name = reader.next();
-					String num = reader.next();
+					System.out.println("Enter name: ");
+					String name = reader.nextLine();
+					System.out.println("Enter phone number: ");
+					String num = reader.nextLine();
 					Contact c = new Contact(name, num);
 					phonebook.addContact(c);
-					// TODO
 
 					System.out.println("Contact added");
 				}
 				case 2 -> { // delete contact
 					System.out.println("Insert name to delete: ");
-					String del_name = reader.next();
+					String del_name = reader.nextLine();
 					phonebook.deleteContact(del_name);
 					// TODO
 					System.out.println("Contact deleted");
@@ -57,7 +57,7 @@ public class Main {
 
 				case 4 -> { // find contact
 					System.out.println("Insert name to search: ");
-					String find_name = reader.next();
+					String find_name = reader.nextLine();
 					ArrayList<Contact> found = phonebook.findContacts(find_name);
 
 					// we're supposed to just print them
@@ -79,7 +79,7 @@ public class Main {
 
 					System.out.println("Phone book sorted numerically");
 				}
-				case 7 -> { // Delete Dups
+				case 7 -> { // Delete Duplicates
 					phonebook.deleteDuplicates();
 					// TODO
 
@@ -96,7 +96,7 @@ public class Main {
 					String outfile = reader.nextLine();
 					try {
 						phonebook.saveToFile(outfile);
-						System.out.println("Successfully written data to the file" + outfile);
+						System.out.println("Successfully written data to the file " + outfile);
 					} catch (IOException e) {
 						System.out.println("Error writing to the output file. Check that " +
 								"the file exists and that it is available for writing.");
@@ -107,14 +107,12 @@ public class Main {
 					String infile = reader.nextLine();
 					try {
 						phonebook.loadFromFile(infile);
-						System.out.println("Successfully read contacts from the file" + infile);
+						System.out.println("Successfully read contacts from the file " + infile);
 					} catch (FileNotFoundException e) {
 						System.out.println("Error reading from the input file. Check that " +
 								"the file exists and that it is available for reading.");
 
 					}
-					// TODO
-					System.out.println("Contacts data loaded to phone book from file " + infile);
 				}
 				case 11 -> { // exit
 					menu_on = false;
