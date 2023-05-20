@@ -49,7 +49,9 @@ public class Phonebook {
 	}
 
 	public ArrayList<Contact> findContacts(String name) {
+		// The function returns linked list with all the contacts with that name
 		ArrayList<Contact> ret = new ArrayList<Contact>();
+		// Searching contacts with that name and adding them to the linked list
 		for (Contact contact:pb) {
 			if (name.equals(contact.getName())) {
 				ret.add(contact);
