@@ -45,15 +45,10 @@ public class Main {
 					System.out.println("Insert name to delete: ");
 					String del_name = reader.nextLine();
 					phonebook.deleteContact(del_name);
-					// TODO
 					System.out.println("Contact deleted");
 				}
 				case 3 -> // print to screen
 						phonebook.printPhoneBook();
-
-
-				// TODO
-
 
 				case 4 -> { // find contact
 					System.out.println("Insert name to search: ");
@@ -66,29 +61,20 @@ public class Main {
 					foundContacts.printPhoneBook();
 				}
 
-				// TODO
-
 				case 5 -> { // sort lexi
 					phonebook.sortByName();
-					// TODO
 					System.out.println("Phone book sorted lexicographically");
 				}
 				case 6 -> { // sort num
 					phonebook.sortByNumber();
-					// TODO
-
 					System.out.println("Phone book sorted numerically");
 				}
 				case 7 -> { // Delete Duplicates
 					phonebook.deleteDuplicates();
-					// TODO
-
 					System.out.println("Duplicates deleted successfully");
 				}
 				case 8 -> { // Reverse
 					phonebook.reverseOrder();
-					// TODO
-
 					System.out.println("Order reversed successfully");
 				}
 				case 9 -> { // Save to file
