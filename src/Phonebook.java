@@ -50,18 +50,20 @@ public class Phonebook {
 
 	public ArrayList<Contact> findContacts(String name) {
 		ArrayList<Contact> ret = new ArrayList<Contact>();
-
-		// TODO 4
-
+		for (Contact contact:pb) {
+			if (name.equals(contact.getName())) {
+				ret.add(contact);
+			}
+		}
 		return ret;
 	}
 
 	public void sortByName() {
-		// TODO 5
+		Collections.sort(pb, new NameComp());
 	}
 
 	public void sortByNumber() {
-		// TODO 6
+		Collections.sort(pb, new PhoneComp());
 	}
 
 	public void deleteDuplicates() {
