@@ -69,7 +69,7 @@ public class Phonebook {
 	}
 
 	public void deleteDuplicates() {
-		Set<Contact> set = new HashSet<>(pb);
+		Set<Contact> set = new TreeSet<>(pb);
 		pb.clear();
 		pb.addAll(set);
 	}
