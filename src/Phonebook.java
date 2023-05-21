@@ -49,19 +49,23 @@ public class Phonebook {
 	}
 
 	public ArrayList<Contact> findContacts(String name) {
+		// The function returns linked list with all the contacts with that name
 		ArrayList<Contact> ret = new ArrayList<Contact>();
-
-		// TODO 4
-
+		// Searching contacts with that name and adding them to the linked list
+		for (Contact contact:pb) {
+			if (name.equals(contact.getName())) {
+				ret.add(contact);
+			}
+		}
 		return ret;
 	}
 
 	public void sortByName() {
-		// TODO 5
+		Collections.sort(pb, new NameComp());
 	}
 
 	public void sortByNumber() {
-		// TODO 6
+		Collections.sort(pb, new PhoneComp());
 	}
 
 	public void deleteDuplicates() {
