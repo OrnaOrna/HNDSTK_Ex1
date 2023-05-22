@@ -16,7 +16,7 @@ public class Phonebook {
 
 	// Default Constructor
 	public Phonebook() {
-		this.pb = new ArrayList<Contact>();
+		this.pb = new ArrayList<>();
 	}
 
 
@@ -50,7 +50,7 @@ public class Phonebook {
 
 	public ArrayList<Contact> findContacts(String name) {
 		// The function returns linked list with all the contacts with that name
-		ArrayList<Contact> ret = new ArrayList<Contact>();
+		ArrayList<Contact> ret = new ArrayList<>();
 		// Searching contacts with that name and adding them to the linked list
 		for (Contact contact:pb) {
 			if (name.equals(contact.getName())) {
@@ -61,11 +61,11 @@ public class Phonebook {
 	}
 
 	public void sortByName() {
-		Collections.sort(pb, new NameComp());
+		pb.sort(new NameComp());
 	}
 
 	public void sortByNumber() {
-		Collections.sort(pb, new PhoneComp());
+		pb.sort(new PhoneComp());
 	}
 
 	public void deleteDuplicates() {
@@ -79,7 +79,7 @@ public class Phonebook {
 	}
 
 	public void saveToFile(String filename) throws IOException {
-		FileWriter writer = new FileWriter(new File(filename));
+		FileWriter writer = new FileWriter(filename);
 		for (Contact contact : pb) {
 			writer.write(contact + "\n");
 		}

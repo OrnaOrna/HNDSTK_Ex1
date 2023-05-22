@@ -16,7 +16,7 @@ public class Main {
 		Scanner reader = new Scanner(System.in);
 		// First time introduction:
 
-		int choice = 0;
+		int choice;
 		boolean menu_on = true;
 
 		Phonebook phonebook = new Phonebook();

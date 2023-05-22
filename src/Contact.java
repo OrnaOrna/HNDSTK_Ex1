@@ -21,7 +21,7 @@ public class Contact implements Comparable<Contact> {
 
 	@Override
 	public Contact clone() throws CloneNotSupportedException {
-		Contact clone = (Contact) super.clone();
+		super.clone();
 		return new Contact(this.getName(), this.getPhoneNum());
 	}
 
